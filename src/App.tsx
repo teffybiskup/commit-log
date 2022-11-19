@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import CommitTable from "./components/CommitTable";
 import FilterToolbar from "./components/FilterToolbar";
 import Sidebar from "./components/SideBar";
 import "./styles/App.css";
 
 const App = () => {
+    const [commitMessageSearch, setCommitMessageSearch] = useState<string>('');
+
     return (
-        <body>
-            <div className="wrapper">
-                <Sidebar />
-                <div className="content">
-                    <FilterToolbar />
-                    <CommitTable />
-                </div>
+        <div className="wrapper">
+            <Sidebar />
+            <div className="content">
+                <FilterToolbar
+                    inputSearch={commitMessageSearch}
+                    onFilterChange={setCommitMessageSearch}
+                />
+                <CommitTable filterSearch={commitMessageSearch}/>
             </div>
-        </body>
+        </div>
     )
 }
+
 export default App;

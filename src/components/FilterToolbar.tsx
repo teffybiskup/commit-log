@@ -1,11 +1,19 @@
 import React from 'react';
-import "../styles/FilterToolbar.css";
+import { IFilterToolbar } from '../types/filter';
 
-const FilterToolbar = () => {
+import "../styles/FilterToolbar.css";
+const FilterToolbar = ({ onFilterChange }: IFilterToolbar) => {
+    const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
+        onFilterChange((e.target as HTMLInputElement).value);
+    };
+
     return (
         <div className="toolbar">
-            <input placeholder="Filter by commit message..."></input>
-            <button>Filter</button>
+            <input
+                onChange={handleChange}
+                placeholder="Filter by commit message..."
+            >
+            </input>
         </div>
     );
 };
