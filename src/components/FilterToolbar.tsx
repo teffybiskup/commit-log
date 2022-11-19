@@ -1,3 +1,4 @@
+import React from 'react';
 import "../styles/FilterToolbar.css";
 
 const FilterToolbar = () => {

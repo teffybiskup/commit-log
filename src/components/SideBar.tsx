@@ -1,3 +1,4 @@
+import React from 'react';
 import BranchTreeView from "./BranchTreeView";
 import "../styles/SideBar.css";
 
