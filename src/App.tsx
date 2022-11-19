@@ -1,8 +1,20 @@
 import React from "react";
+import CommitTable from "./components/CommitTable";
+import FilterToolbar from "./components/FilterToolbar";
+import Sidebar from "./components/SideBar";
+import "./styles/App.css";
 
- const App = () => {
+const App = () => {
     return (
-        <h1>React with TypeScript</h1>
+        <body>
+            <div className="wrapper">
+                <Sidebar/>
+                <div className="content">
+                    <FilterToolbar/>
+                    <CommitTable/>
+                </div>
+            </div>
+        </body>
     )
 }
 export default App;
