@@ -1,0 +1,11 @@
+.menu {
+  border-right: solid 1px #DDDFE0;
+  background-color: #E6E8EB;
+}
+
+.title {
+  padding: 0px 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
