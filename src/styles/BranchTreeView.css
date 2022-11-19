@@ -1,3 +1,7 @@
 .tree-view {
     padding: 0px 20px;
 }
+
+.branch-title {
+    text-transform: uppercase;
+}
