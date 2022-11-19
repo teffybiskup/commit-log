@@ -5,7 +5,7 @@ const Sidebar = () => {
     return (
         <div className="menu">
             <h3 className="title" title="organization/repository">organization/repository</h3>
-            <BranchTreeView/>
+            <BranchTreeView />
         </div>
     );
 };
