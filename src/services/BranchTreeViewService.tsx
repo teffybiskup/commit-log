@@ -1,4 +1,4 @@
-import { IBranch } from '../../common/types';
+import { IBranch } from '../types/branch';
 
 export async function getAllBranches(): Promise<IBranch[] | []> {
     try {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { IBranch } from '../common/types';
-import { getAllBranches } from "../services/SideBar/BranchTreeViewService";
+import { IBranch } from '../types/branch';
+import { getAllBranches } from "../services/BranchTreeViewService";
 import "../styles/BranchTreeView.css";
 
 const BranchTreeView = () => {
@@ -17,16 +17,16 @@ const BranchTreeView = () => {
 
     const renderBranchTreeItem = (list: string[]) => {
         return <ul>
-            {list.map((branch) => (
-                <li title={branch}>{branch}</li>
+            {list.map((branch, index) => (
+                <li key={index} title={branch}>{branch}</li>
             ))}
         </ul>
     }
 
     return (
         <div className="tree-view">
-            {branchList.map((branch) => (
-                <>
+            {branchList.map((branch, index) => (
+                <div key={index}>
                     <h4 title={branch.name} className="branch-title">{branch.name} Branches</h4>
                     {(branch.list instanceof Array) ? (
                         <>{renderBranchTreeItem(branch.list)}</>
@@ -36,7 +36,7 @@ const BranchTreeView = () => {
                             {renderBranchTreeItem(branch.list?.list as string[])}
                         </ul>
                     )}
-                </>
+                </div>
             ))}
         </div>
     );
