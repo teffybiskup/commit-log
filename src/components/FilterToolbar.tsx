@@ -10,6 +10,7 @@ const FilterToolbar = ({ onFilterChange }: IFilterToolbar) => {
     return (
         <div className="toolbar">
             <input
+                className="input-search"
                 onChange={handleChange}
                 placeholder="Filter by commit message..."
             >
