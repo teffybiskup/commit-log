@@ -1,7 +1,30 @@
 .commit-table {
     width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    line-height: 13px;
 }
 
 .table-header {
-    background-color: #D4D3D3;
+    background-color: #D8D8D8;
+}
+
+.table-header th {
+    border: 1px solid #A9A9A9;
+    padding: 6px 0px 5px 7px;
+    font-weight: normal;
+    text-align: left;
+}
+
+.table-header th:first-child {
+    min-width: 25px;
+    text-align: center;
+}
+
+.table-body td {
+    height: 25px;
+}
+
+.table-body td:first-child {
+    text-align: center;
 }

@@ -10,7 +10,7 @@ const CommitTable = ({ filterSearch }: ICommitTable) => {
             branchBackgroundColor: "#DF9FF7",
             branchColor: "#624573",
             description: "Some commit message from the developer here",
-            hash: "000000000000",
+            hash: "057d1e616b4a4...",
             author: "John Smith",
             date: "Today at 9:25 PM",
         }
@@ -18,9 +18,9 @@ const CommitTable = ({ filterSearch }: ICommitTable) => {
 
     return (
         <table className="commit-table">
-            <thead>
-                <tr className="table-header">
-                    <th>Graph</th>
+            <thead className="table-header">
+                <tr>
+                    <th>{!filterSearch && "Graph"}</th>
                     <th>Description</th>
                     <th>Commit #</th>
                     <th>Author</th>
@@ -28,19 +28,21 @@ const CommitTable = ({ filterSearch }: ICommitTable) => {
                 </tr>
             </thead>
 
-            <tbody>
+            <tbody className="table-body">
                 {items
                 .filter(item => !filterSearch || item.description.toLowerCase().includes(filterSearch.toLowerCase()))
                 .map((item, index) => {
                     return (
                         <tr key={index}>
-                            <td>X</td>
+                            <td>{!filterSearch && "X"}</td>
                             <td>
-                                <Pill
-                                    text={item.branch}
-                                    backgroundColor={item.branchBackgroundColor}
-                                    color={item.branchColor}
-                                />
+                                {!filterSearch && (
+                                    <Pill
+                                        text={item.branch}
+                                        backgroundColor={item.branchBackgroundColor}
+                                        color={item.branchColor}
+                                    />
+                                )}
                                 {item.description}
                             </td>
                             <td>{item.hash}</td>
