@@ -8,10 +8,10 @@ const App = () => {
     return (
         <body>
             <div className="wrapper">
-                <Sidebar/>
+                <Sidebar />
                 <div className="content">
-                    <FilterToolbar/>
-                    <CommitTable/>
+                    <FilterToolbar />
+                    <CommitTable />
                 </div>
             </div>
         </body>
