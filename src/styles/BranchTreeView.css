@@ -1,7 +1,10 @@
-.tree-view {
-    padding: 0px 20px;
+.tree-view ul {
+    font-size: 12px;
 }
 
 .branch-title {
     text-transform: uppercase;
+    font-weight: 700;
+    color: #81858B;
+    font-size: 11px;
 }

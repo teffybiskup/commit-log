@@ -1,11 +1,18 @@
 .menu {
-  border-right: solid 1px #DDDFE0;
-  background-color: #E6E8EB;
+  padding: 0 28px;
+  width: 256px;
+  border-right: solid 1px #C1C7C9;
+  background-color: #E9EBEE;
 }
 
 .title {
-  padding: 0px 20px;
+  margin: 18px 0 32px 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+  display: block;
 }

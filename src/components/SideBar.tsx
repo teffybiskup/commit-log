@@ -5,7 +5,7 @@ import "../styles/SideBar.css";
 const Sidebar = () => {
     return (
         <div className="menu">
-            <h3 className="title" title="organization/repository">organization/repository</h3>
+            <span className="title" title="organization/repository">organization/repository</span>
             <BranchTreeView />
         </div>
     );

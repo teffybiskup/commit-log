@@ -27,7 +27,7 @@ const BranchTreeView = () => {
         <div className="tree-view">
             {branchList.map((branch, index) => (
                 <div key={index}>
-                    <h4 title={branch.name} className="branch-title">{branch.name} Branches</h4>
+                    <span title={branch.name} className="branch-title">{branch.name} branches</span>
                     {(branch.list instanceof Array) ? (
                         <>{renderBranchTreeItem(branch.list)}</>
                     ) : (
