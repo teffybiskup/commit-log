@@ -3,6 +3,9 @@ export interface ICommitTable {
 }
 
 export interface ICommit {
+    branch: string;
+    branchBackgroundColor: string;
+    branchColor: string;
     description: string;
     hash: string;
     author: string;

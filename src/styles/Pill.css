@@ -1,0 +1,8 @@
+.pill {
+    height: 17px;
+    width: auto;
+    padding: 3px 7px;
+    border-radius: 8px;
+    margin-right: 4px;
+    font-size: 11px;
+}

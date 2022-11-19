@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { ICommitTable, ICommit } from '../types/commit';
 import "../styles/CommitTable.css";
+import Pill from './Pill';
 
 const CommitTable = ({ filterSearch }: ICommitTable) => {
     const [items] = useState<ICommit[]>([
         {
+            branch: "origin/feature/test2",
+            branchBackgroundColor: "#DF9FF7",
+            branchColor: "#624573",
             description: "Some commit message from the developer here",
             hash: "000000000000",
             author: "John Smith",
@@ -31,7 +35,14 @@ const CommitTable = ({ filterSearch }: ICommitTable) => {
                     return (
                         <tr key={index}>
                             <td>X</td>
-                            <td>{item.description}</td>
+                            <td>
+                                <Pill
+                                    text={item.branch}
+                                    backgroundColor={item.branchBackgroundColor}
+                                    color={item.branchColor}
+                                />
+                                {item.description}
+                            </td>
                             <td>{item.hash}</td>
                             <td>{item.author}</td>
                             <td>{item.date}</td>
