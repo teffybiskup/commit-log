@@ -1,13 +1,18 @@
-export interface ICommitTable {
-    filterSearch: string;
+export interface ICommitBranch {
+    name: string;
+    backgroundColor: string;
+    textColor: string;
+    showPill: boolean,
 }
 
 export interface ICommit {
-    branch: string;
-    branchBackgroundColor: string;
-    branchColor: string;
+    branches: ICommitBranch[];
     description: string;
     hash: string;
     author: string;
     date: string;
+}
+
+export interface ICommitTable {
+    filterSearch: string;
 }
