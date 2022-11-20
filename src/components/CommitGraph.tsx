@@ -11,7 +11,7 @@ const CommitGraph = () => {
             label: {
                 display: false
             },
-            spacing: 12,
+            spacing: 10,
         },
         commit: {
             message: {
