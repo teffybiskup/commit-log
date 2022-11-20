@@ -1,20 +1,53 @@
 import React, { useEffect, useState } from 'react';
-import { ICommitTable, ICommit } from '../types/commit';
-import "../styles/CommitTable.css";
+import { ICommitTable, ICommit, ICommitBranch } from '../types/commit';
+import { getAllCommits } from '../services/CommitTableService';
 import Pill from './Pill';
+import "../styles/CommitTable.css";
 
 const CommitTable = ({ filterSearch }: ICommitTable) => {
-    const [items] = useState<ICommit[]>([
-        {
-            branch: "origin/feature/test2",
-            branchBackgroundColor: "#DF9FF7",
-            branchColor: "#624573",
-            description: "Some commit message from the developer here",
-            hash: "057d1e616b4a4...",
-            author: "John Smith",
-            date: "Today at 9:25 PM",
+    const [commitList, setCommitList] = useState<ICommit[] | []>([]);
+
+    useEffect(() => {
+        async function fetchCommitList() {
+            const commits = await getAllCommits();
+            setCommitList(commits);
         }
-    ]);
+
+        fetchCommitList();
+    }, []);
+
+    const renderPill = (branches: ICommitBranch[]) => {
+        return !filterSearch && branches
+            .filter(branch => branch.showPill)
+            .map((branch) => {
+                return (
+                    <Pill
+                        text={branch.name}
+                        backgroundColor={branch.backgroundColor}
+                        color={branch.textColor}
+                    />
+                )
+            })
+    }
+
+    const renderTableBody = () => {
+        return commitList
+            .filter(commit => !filterSearch || commit.description.toLowerCase().includes(filterSearch.toLowerCase()))
+            .map((commit, index) => {
+                return (
+                    <tr key={index}>
+                        <td>{!filterSearch && "X"}</td>
+                        <td>
+                            {renderPill(commit.branches)}
+                            {commit.description}
+                        </td>
+                        <td>{commit.hash}</td>
+                        <td>{commit.author}</td>
+                        <td>{commit.date}</td>
+                    </tr>
+                )
+            })
+    }
 
     return (
         <table className="commit-table">
@@ -29,28 +62,7 @@ const CommitTable = ({ filterSearch }: ICommitTable) => {
             </thead>
 
             <tbody className="table-body">
-                {items
-                .filter(item => !filterSearch || item.description.toLowerCase().includes(filterSearch.toLowerCase()))
-                .map((item, index) => {
-                    return (
-                        <tr key={index}>
-                            <td>{!filterSearch && "X"}</td>
-                            <td>
-                                {!filterSearch && (
-                                    <Pill
-                                        text={item.branch}
-                                        backgroundColor={item.branchBackgroundColor}
-                                        color={item.branchColor}
-                                    />
-                                )}
-                                {item.description}
-                            </td>
-                            <td>{item.hash}</td>
-                            <td>{item.author}</td>
-                            <td>{item.date}</td>
-                        </tr>
-                    )
-                })}
+                {renderTableBody()}
             </tbody>
         </table>
     );
