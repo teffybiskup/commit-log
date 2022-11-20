@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ICommitTable, ICommit, ICommitBranch } from '../types/commit';
 import { getAllCommits } from '../services/CommitTableService';
+import CommitGraph from './CommitGraph';
 import Pill from './Pill';
 import "../styles/CommitTable.css";
 
@@ -36,7 +37,7 @@ const CommitTable = ({ filterSearch }: ICommitTable) => {
             .map((commit, index) => {
                 return (
                     <tr key={index}>
-                        <td>{!filterSearch && "X"}</td>
+                        <td></td>
                         <td>
                             {renderPill(commit.branches)}
                             {commit.description}
@@ -62,6 +63,7 @@ const CommitTable = ({ filterSearch }: ICommitTable) => {
             </thead>
 
             <tbody className="table-body">
+                <CommitGraph />
                 {renderTableBody()}
             </tbody>
         </table>

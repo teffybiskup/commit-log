@@ -17,7 +17,8 @@
 }
 
 .table-header th:first-child {
-    min-width: 25px;
+    padding: 6px 0px 5px 0px;
+    min-width: 40px;
     text-align: center;
 }
 
