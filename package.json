@@ -17,6 +17,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@fontsource/roboto": "^4.5.8",
     "@gitgraph/react": "^1.6.0",
     "@mui/icons-material": "^5.10.14",
     "@mui/material": "^5.10.14",
