@@ -1,5 +1,11 @@
 .tree-view ul {
     font-size: 12px;
+    list-style: none;
+    padding-inline-start: 10px;
+}
+
+.tree-view ul > ul {
+    padding-inline-start: 17px;
 }
 
 .branch-title {
