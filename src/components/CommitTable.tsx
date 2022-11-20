@@ -63,7 +63,7 @@ const CommitTable = ({ filterSearch }: ICommitTable) => {
             </thead>
 
             <tbody className="table-body">
-                <CommitGraph />
+                {!filterSearch && <CommitGraph />}
                 {renderTableBody()}
             </tbody>
         </table>
