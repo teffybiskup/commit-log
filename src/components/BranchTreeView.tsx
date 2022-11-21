@@ -22,7 +22,7 @@ const BranchTreeView = () => {
     return (
       <ul>
         {list.map((branch, index) => (
-          <li key={index} title={branch}>
+          <li key={index} title={branch} data-testid="tree-item">
             <FiCircle
               color={COLORS.itemTreeView}
               style={{ marginRight: 8 }}
