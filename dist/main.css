@@ -10,6 +10,7 @@
   font-size: 9px;
   line-height: 11px;
 }
+
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/CommitTable.css ***!
   \******************************************************************************/
@@ -33,27 +34,31 @@
 
 .table-header th:first-child {
   padding: 6px 0px 5px 0px;
-  width: 55px;
+  width: 61px;
   text-align: center;
 }
 
 @media (max-width: 960px) {
   .table-header th:first-child {
-    min-width: 55px;
+    min-width: 61px;
   }
 }
 
 .table-body td {
   height: 25px;
+  border: 1px solid transparent;
 }
+
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/FilterToolbar.css ***!
   \********************************************************************************/
 .toolbar {
   background: rgba(239, 242, 244, 0.498279);
+  display: flex;
+  align-items: center;
 }
 
-.input-search {
+.filter-input {
   font-size: 12px;
   line-height: 14px;
   margin: 16px;
@@ -62,6 +67,17 @@
   height: 28px;
   border: 1px solid #e3e1e1;
 }
+
+.filter-button {
+  width: 85px;
+  height: 32px;
+  background: linear-gradient(180deg, #faf2f2 0%, #ede5e5 100%);
+  border: 1px solid #d0cccc;
+  line-height: 14px;
+  color: #5a5151;
+  font-size: 12px;
+}
+
 /*!*********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/BranchTreeView.css ***!
   \*********************************************************************************/
@@ -81,6 +97,7 @@
   color: #81858b;
   font-size: 11px;
 }
+
 /*!**************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/SideBar.css ***!
   \**************************************************************************/
@@ -108,6 +125,7 @@
     display: none;
   }
 }
+
 /*!**********************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/App.css ***!
   \**********************************************************************/
