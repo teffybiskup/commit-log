@@ -25,6 +25,7 @@ const FilterToolbar = ({ onFilterChange }: IFilterToolbar) => {
   return (
     <div className="toolbar">
       <input
+        data-testid="filter-input"
         className="filter-input"
         placeholder="Filter by commit message..."
         value={filterValue}
