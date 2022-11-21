@@ -29,7 +29,7 @@ const CommitGraph = () => {
       dot: {
         size: 5,
       },
-      spacing: 26.9,
+      spacing: 28,
     },
   });
   const branchesOrder = ["secondFeature", "master", "dev", "feature"];
