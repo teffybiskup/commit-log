@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { ICommitTable, ICommit, ICommitBranch } from "../types/commit";
 import { getAllCommits } from "../services/CommitTableService";
 import CommitGraph from "./CommitGraph";
@@ -6,6 +7,7 @@ import Pill from "./Pill";
 import "../styles/CommitTable.css";
 
 const CommitTable = ({ filterSearch }: ICommitTable) => {
+  const [searchParams] = useSearchParams();
   const [commitList, setCommitList] = useState<ICommit[] | []>([]);
 
   useEffect(() => {
@@ -17,9 +19,11 @@ const CommitTable = ({ filterSearch }: ICommitTable) => {
     fetchCommitList();
   }, []);
 
+  const filterValue = filterSearch || searchParams.get("filter");
+
   const renderPill = (branches: ICommitBranch[]) => {
     return (
-      !filterSearch &&
+      !filterValue &&
       branches
         .filter((branch) => branch.showPill)
         .map((branch) => {
@@ -38,8 +42,8 @@ const CommitTable = ({ filterSearch }: ICommitTable) => {
     return commitList
       .filter(
         (commit) =>
-          !filterSearch ||
-          commit.description.toLowerCase().includes(filterSearch.toLowerCase())
+          !filterValue ||
+          commit.description.toLowerCase().includes(filterValue.toLowerCase())
       )
       .map((commit, index) => {
         return (
@@ -61,7 +65,7 @@ const CommitTable = ({ filterSearch }: ICommitTable) => {
     <table className="commit-table">
       <thead className="table-header">
         <tr>
-          <th>{!filterSearch && "Graph"}</th>
+          <th>{!filterValue && "Graph"}</th>
           <th>Description</th>
           <th>Commit #</th>
           <th>Author</th>
@@ -70,7 +74,7 @@ const CommitTable = ({ filterSearch }: ICommitTable) => {
       </thead>
 
       <tbody className="table-body">
-        {!filterSearch && <CommitGraph />}
+        {!filterValue && <CommitGraph />}
         {renderTableBody()}
       </tbody>
     </table>
