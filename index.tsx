@@ -3,5 +3,5 @@ import { createRoot } from "react-dom/client";
 import App from "./src/App";
 
 const container = document.querySelector("#root");
-const root = createRoot(container!); // createRoot(container!) if you use TypeScript
+const root = createRoot(container!);
 root.render(<App />);
