@@ -16,3 +16,9 @@
   color: #000;
   display: block;
 }
+
+@media (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+}
