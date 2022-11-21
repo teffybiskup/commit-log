@@ -13,10 +13,7 @@ const App = () => {
       <div className="wrapper">
         <Sidebar />
         <div className="content">
-          <FilterToolbar
-            inputSearch={commitMessageSearch}
-            onFilterChange={setCommitMessageSearch}
-          />
+          <FilterToolbar onFilterChange={setCommitMessageSearch} />
           <CommitTable filterSearch={commitMessageSearch} />
         </div>
       </div>
