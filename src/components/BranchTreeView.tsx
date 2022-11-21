@@ -23,7 +23,11 @@ const BranchTreeView = () => {
       <ul>
         {list.map((branch, index) => (
           <li key={index} title={branch}>
-            <FiCircle color={COLORS.itemTreeView} style={{ marginRight: 8 }} size={8} />
+            <FiCircle
+              color={COLORS.itemTreeView}
+              style={{ marginRight: 8 }}
+              size={8}
+            />
             {branch}
           </li>
         ))}
@@ -43,7 +47,10 @@ const BranchTreeView = () => {
           ) : (
             <ul>
               <li title={branch.list.name}>
-                <RiArrowDownSFill color={COLORS.itemTreeView} style={{ marginRight: 5 }} />
+                <RiArrowDownSFill
+                  color={COLORS.itemTreeView}
+                  style={{ marginRight: 5 }}
+                />
                 {branch.list.name}
               </li>
               {renderBranchTreeItem(branch.list?.list as string[])}

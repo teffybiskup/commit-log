@@ -17,9 +17,9 @@
 .filter-button {
   width: 85px;
   height: 32px;
-  background: linear-gradient(180deg, #FAF2F2 0%, #EDE5E5 100%);
-  border: 1px solid #D0CCCC;
+  background: linear-gradient(180deg, #faf2f2 0%, #ede5e5 100%);
+  border: 1px solid #d0cccc;
   line-height: 14px;
-  color: #5A5151;
+  color: #5a5151;
   font-size: 12px;
 }
