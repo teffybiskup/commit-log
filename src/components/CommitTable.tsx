@@ -26,9 +26,10 @@ const CommitTable = ({ filterSearch }: ICommitTable) => {
       !filterValue &&
       branches
         .filter((branch) => branch.showPill)
-        .map((branch) => {
+        .map((branch, index) => {
           return (
             <Pill
+              key={index}
               text={branch.name}
               backgroundColor={branch.backgroundColor}
               color={branch.textColor}
