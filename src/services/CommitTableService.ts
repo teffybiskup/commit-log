@@ -1,5 +1,5 @@
 import { ICommit } from "../types/commit";
-import { COLORS } from "../values/colors";
+import { COLORS } from "../constants/colors";
 
 export async function getAllCommits(): Promise<ICommit[] | []> {
   try {
