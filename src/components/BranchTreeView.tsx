@@ -18,7 +18,7 @@ const BranchTreeView = () => {
     fetchBranchList();
   }, []);
 
-  const renderBranchTreeItem = (list: string[]) => {
+  const renderBranchTreeItems = (list: string[]) => {
     return (
       <ul>
         {list.map((branch, index) => (
@@ -43,7 +43,7 @@ const BranchTreeView = () => {
             {branch.name} branches
           </span>
           {branch.list instanceof Array ? (
-            <>{renderBranchTreeItem(branch.list)}</>
+            <>{renderBranchTreeItems(branch.list)}</>
           ) : (
             <ul>
               <li title={branch.list.name}>
@@ -53,7 +53,7 @@ const BranchTreeView = () => {
                 />
                 {branch.list.name}
               </li>
-              {renderBranchTreeItem(branch.list?.list as string[])}
+              {renderBranchTreeItems(branch.list?.list as string[])}
             </ul>
           )}
         </div>
