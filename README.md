@@ -15,10 +15,11 @@ The screen contains three sections:
 - When the width of the browser screen is less than 800 pixels, the sidebar disappears from view.
 ## Screenshots
 
-![Commit Log](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-![Filtering](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-![Mobile Version](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Commit Log](https://user-images.githubusercontent.com/33550545/202971563-67a8a8bf-f9fa-4495-9e8d-c2a5bdd16e7f.png)
 
+![Filtering](https://user-images.githubusercontent.com/33550545/202971582-e5311609-2e70-4727-a5bf-2f1f15fd1812.png)
+
+![Mobile Version](https://user-images.githubusercontent.com/33550545/202971943-24d6f19e-918e-486d-a324-ae715c6087d9.png)
 
 ## Run Locally
 
@@ -29,7 +30,7 @@ Pre-requisites
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/teffybiskup/commit-log
 ```
 
 Go to the project directory
