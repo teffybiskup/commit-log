@@ -18,13 +18,13 @@
 
 .table-header th:first-child {
   padding: 6px 0px 5px 0px;
-  width: 55px;
+  width: 61px;
   text-align: center;
 }
 
 @media (max-width: 960px) {
   .table-header th:first-child {
-    min-width: 55px;
+    min-width: 61px;
   }
 }
 
