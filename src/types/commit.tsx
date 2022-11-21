@@ -14,5 +14,5 @@ export interface ICommit {
 }
 
 export interface ICommitTable {
-  filterSearch: string;
+  filterSearch?: string;
 }

@@ -48,7 +48,7 @@ const CommitTable = ({ filterSearch }: ICommitTable) => {
       )
       .map((commit, index) => {
         return (
-          <tr key={index}>
+          <tr key={index} data-testid="commit-row">
             <td></td>
             <td>
               {renderPill(commit.branches)}
