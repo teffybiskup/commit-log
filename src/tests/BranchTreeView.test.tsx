@@ -7,6 +7,8 @@ describe("BranchTreeView", () => {
     render(<BranchTreeView />);
 
     // Assert
-    await waitFor(() => expect(screen.getAllByTestId("tree-item")).toHaveLength(11));
+    await waitFor(() =>
+      expect(screen.getAllByTestId("tree-item")).toHaveLength(11)
+    );
   });
 });
