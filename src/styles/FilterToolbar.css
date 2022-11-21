@@ -1,8 +1,10 @@
 .toolbar {
   background: rgba(239, 242, 244, 0.498279);
+  display: flex;
+  align-items: center;
 }
 
-.input-search {
+.filter-input {
   font-size: 12px;
   line-height: 14px;
   margin: 16px;
@@ -10,4 +12,14 @@
   width: 300px;
   height: 28px;
   border: 1px solid #e3e1e1;
+}
+
+.filter-button {
+  width: 85px;
+  height: 32px;
+  background: linear-gradient(180deg, #FAF2F2 0%, #EDE5E5 100%);
+  border: 1px solid #D0CCCC;
+  line-height: 14px;
+  color: #5A5151;
+  font-size: 12px;
 }
