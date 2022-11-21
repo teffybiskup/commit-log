@@ -5,7 +5,7 @@ import {
   templateExtend,
   TemplateName,
 } from "@gitgraph/react";
-import { COLORS } from "../values/colors";
+import { COLORS } from "../constants/colors";
 
 // Based on https://github.com/nicoespeon/gitgraph.js/tree/master/packages/gitgraph-react
 const CommitGraph = () => {

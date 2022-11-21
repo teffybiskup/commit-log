@@ -3,7 +3,7 @@ import { RiArrowDownSFill } from "react-icons/ri";
 import { FiCircle } from "react-icons/fi";
 import { IBranch } from "../types/branch";
 import { getAllBranches } from "../services/BranchTreeViewService";
-import { COLORS } from "../values/colors";
+import { COLORS } from "../constants/colors";
 import "../styles/BranchTreeView.css";
 
 const BranchTreeView = () => {
