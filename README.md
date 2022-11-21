@@ -15,11 +15,11 @@ The screen contains three sections:
 - When the width of the browser screen is less than 800 pixels, the sidebar disappears from view.
 ## Screenshots
 
-![Commit Log](https://user-images.githubusercontent.com/33550545/202971563-67a8a8bf-f9fa-4495-9e8d-c2a5bdd16e7f.png)
+![Commit Log](https://user-images.githubusercontent.com/33550545/202973450-f78dfbec-cee7-4390-bd60-1792a81f6404.png)
 
-![Filtering](https://user-images.githubusercontent.com/33550545/202971582-e5311609-2e70-4727-a5bf-2f1f15fd1812.png)
+![Filtering](https://user-images.githubusercontent.com/33550545/202973688-94aee411-025f-4813-bccb-1e8d856b0c81.png)
 
-![Mobile Version](https://user-images.githubusercontent.com/33550545/202971943-24d6f19e-918e-486d-a324-ae715c6087d9.png)
+![Mobile Version](https://user-images.githubusercontent.com/33550545/202973705-b604d34f-8a03-44f6-9052-ccd393abd6b0.png)
 
 ## Run Locally
 
