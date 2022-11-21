@@ -1,16 +1,16 @@
 .tree-view ul {
-    font-size: 12px;
-    list-style: none;
-    padding-inline-start: 10px;
+  font-size: 12px;
+  list-style: none;
+  padding-inline-start: 10px;
 }
 
 .tree-view ul > ul {
-    padding-inline-start: 17px;
+  padding-inline-start: 17px;
 }
 
 .branch-title {
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #81858B;
-    font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #81858b;
+  font-size: 11px;
 }

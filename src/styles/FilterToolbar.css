@@ -1,13 +1,13 @@
 .toolbar {
-    background: rgba(239, 242, 244, 0.498279);
+  background: rgba(239, 242, 244, 0.498279);
 }
 
 .input-search {
-    font-size: 12px;
-    line-height: 14px;
-    margin: 16px;
-    padding-left: 10px;
-    width: 300px;
-    height: 28px;
-    border: 1px solid #E3E1E1;
+  font-size: 12px;
+  line-height: 14px;
+  margin: 16px;
+  padding-left: 10px;
+  width: 300px;
+  height: 28px;
+  border: 1px solid #e3e1e1;
 }

@@ -5,20 +5,20 @@ import Sidebar from "./components/SideBar";
 import "./styles/App.css";
 
 const App = () => {
-    const [commitMessageSearch, setCommitMessageSearch] = useState<string>('');
+  const [commitMessageSearch, setCommitMessageSearch] = useState<string>("");
 
-    return (
-        <div className="wrapper">
-            <Sidebar />
-            <div className="content">
-                <FilterToolbar
-                    inputSearch={commitMessageSearch}
-                    onFilterChange={setCommitMessageSearch}
-                />
-                <CommitTable filterSearch={commitMessageSearch}/>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="wrapper">
+      <Sidebar />
+      <div className="content">
+        <FilterToolbar
+          inputSearch={commitMessageSearch}
+          onFilterChange={setCommitMessageSearch}
+        />
+        <CommitTable filterSearch={commitMessageSearch} />
+      </div>
+    </div>
+  );
+};
 
 export default App;

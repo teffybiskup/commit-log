@@ -1,33 +1,33 @@
 .commit-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 11px;
-    white-space: nowrap;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  white-space: nowrap;
 }
 
 .table-header {
-    background-color: #D8D8D8;
+  background-color: #d8d8d8;
 }
 
 .table-header th {
-    border: 1px solid #A9A9A9;
-    padding: 6px 0px 5px 7px;
-    font-weight: normal;
-    text-align: left;
+  border: 1px solid #a9a9a9;
+  padding: 6px 0px 5px 7px;
+  font-weight: normal;
+  text-align: left;
 }
 
 .table-header th:first-child {
-    padding: 6px 0px 5px 0px;
-    width: 55px;
-    text-align: center;
+  padding: 6px 0px 5px 0px;
+  width: 55px;
+  text-align: center;
 }
 
 @media (max-width: 960px) {
-    .table-header th:first-child {
-        min-width: 55px;
-    }
+  .table-header th:first-child {
+    min-width: 55px;
+  }
 }
 
 .table-body td {
-    height: 25px;
+  height: 25px;
 }
