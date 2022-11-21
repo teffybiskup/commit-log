@@ -1,4 +1,5 @@
 import { ICommit } from "../types/commit";
+import { COLORS } from "../values/colors";
 
 export async function getAllCommits(): Promise<ICommit[] | []> {
   try {
@@ -7,8 +8,8 @@ export async function getAllCommits(): Promise<ICommit[] | []> {
         branches: [
           {
             name: "origin/feature/test2",
-            backgroundColor: "#DF9FF7",
-            textColor: "#624573",
+            backgroundColor: COLORS.purple,
+            textColor: COLORS.purpleText,
             showPill: true,
           },
         ],
@@ -21,14 +22,14 @@ export async function getAllCommits(): Promise<ICommit[] | []> {
         branches: [
           {
             name: "origin/HEAD",
-            backgroundColor: "#8AE798",
-            textColor: "#45734C",
+            backgroundColor: COLORS.green,
+            textColor: COLORS.greenText,
             showPill: true,
           },
           {
             name: "dev",
-            backgroundColor: "#8AE798",
-            textColor: "#45734C",
+            backgroundColor: COLORS.green,
+            textColor: COLORS.greenText,
             showPill: true,
           },
         ],
@@ -41,8 +42,8 @@ export async function getAllCommits(): Promise<ICommit[] | []> {
         branches: [
           {
             name: "master",
-            backgroundColor: "#96D0EC",
-            textColor: "#455E73",
+            backgroundColor: COLORS.blue,
+            textColor: COLORS.blueText,
             showPill: true,
           },
         ],
@@ -55,8 +56,8 @@ export async function getAllCommits(): Promise<ICommit[] | []> {
         branches: [
           {
             name: "master",
-            backgroundColor: "#96D0EC",
-            textColor: "#455E73",
+            backgroundColor: COLORS.blue,
+            textColor: COLORS.blueText,
             showPill: false,
           },
         ],
@@ -69,8 +70,8 @@ export async function getAllCommits(): Promise<ICommit[] | []> {
         branches: [
           {
             name: "master",
-            backgroundColor: "#96D0EC",
-            textColor: "#455E73",
+            backgroundColor: COLORS.blue,
+            textColor: COLORS.blueText,
             showPill: false,
           },
         ],
@@ -83,8 +84,8 @@ export async function getAllCommits(): Promise<ICommit[] | []> {
         branches: [
           {
             name: "master",
-            backgroundColor: "#96D0EC",
-            textColor: "#455E73",
+            backgroundColor: COLORS.blue,
+            textColor: COLORS.blueText,
             showPill: false,
           },
         ],
@@ -97,8 +98,8 @@ export async function getAllCommits(): Promise<ICommit[] | []> {
         branches: [
           {
             name: "master",
-            backgroundColor: "#96D0EC",
-            textColor: "#455E73",
+            backgroundColor: COLORS.blue,
+            textColor: COLORS.blueText,
             showPill: false,
           },
         ],
@@ -111,8 +112,8 @@ export async function getAllCommits(): Promise<ICommit[] | []> {
         branches: [
           {
             name: "origin/master",
-            backgroundColor: "#96D0EC",
-            textColor: "#455E73",
+            backgroundColor: COLORS.blue,
+            textColor: COLORS.blueText,
             showPill: true,
           },
         ],
@@ -125,8 +126,8 @@ export async function getAllCommits(): Promise<ICommit[] | []> {
         branches: [
           {
             name: "origin/feature/test",
-            backgroundColor: "#EC9696",
-            textColor: "#734545",
+            backgroundColor: COLORS.red,
+            textColor: COLORS.redText,
             showPill: true,
           },
         ],
@@ -139,8 +140,8 @@ export async function getAllCommits(): Promise<ICommit[] | []> {
         branches: [
           {
             name: "origin/feature/test",
-            backgroundColor: "#EC9696",
-            textColor: "#734545",
+            backgroundColor: COLORS.red,
+            textColor: COLORS.redText,
             showPill: false,
           },
         ],
@@ -153,8 +154,8 @@ export async function getAllCommits(): Promise<ICommit[] | []> {
         branches: [
           {
             name: "origin/feature/test",
-            backgroundColor: "#EC9696",
-            textColor: "#734545",
+            backgroundColor: COLORS.red,
+            textColor: COLORS.redText,
             showPill: false,
           },
         ],
@@ -167,8 +168,8 @@ export async function getAllCommits(): Promise<ICommit[] | []> {
         branches: [
           {
             name: "origin/feature/test",
-            backgroundColor: "#EC9696",
-            textColor: "#734545",
+            backgroundColor: COLORS.red,
+            textColor: COLORS.redText,
             showPill: false,
           },
         ],
@@ -181,8 +182,8 @@ export async function getAllCommits(): Promise<ICommit[] | []> {
         branches: [
           {
             name: "origin/feature/test",
-            backgroundColor: "#EC9696",
-            textColor: "#734545",
+            backgroundColor: COLORS.red,
+            textColor: COLORS.redText,
             showPill: false,
           },
         ],
@@ -195,8 +196,8 @@ export async function getAllCommits(): Promise<ICommit[] | []> {
         branches: [
           {
             name: "origin/master",
-            backgroundColor: "#96D0EC",
-            textColor: "#455E73",
+            backgroundColor: COLORS.blue,
+            textColor: COLORS.blueText,
             showPill: false,
           },
         ],

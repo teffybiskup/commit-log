@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { IBranch } from "../types/branch";
-import { getAllBranches } from "../services/BranchTreeViewService";
 import { RiArrowDownSFill } from "react-icons/ri";
 import { FiCircle } from "react-icons/fi";
+import { IBranch } from "../types/branch";
+import { getAllBranches } from "../services/BranchTreeViewService";
+import { COLORS } from "../values/colors";
 import "../styles/BranchTreeView.css";
 
 const BranchTreeView = () => {
@@ -22,7 +23,7 @@ const BranchTreeView = () => {
       <ul>
         {list.map((branch, index) => (
           <li key={index} title={branch}>
-            <FiCircle color="#BEC1C3" style={{ marginRight: 8 }} size={8} />
+            <FiCircle color={COLORS.itemTreeView} style={{ marginRight: 8 }} size={8} />
             {branch}
           </li>
         ))}
@@ -42,7 +43,7 @@ const BranchTreeView = () => {
           ) : (
             <ul>
               <li title={branch.list.name}>
-                <RiArrowDownSFill color="#BEC1C3" style={{ marginRight: 5 }} />
+                <RiArrowDownSFill color={COLORS.itemTreeView} style={{ marginRight: 5 }} />
                 {branch.list.name}
               </li>
               {renderBranchTreeItem(branch.list?.list as string[])}

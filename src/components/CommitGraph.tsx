@@ -5,11 +5,12 @@ import {
   templateExtend,
   TemplateName,
 } from "@gitgraph/react";
+import { COLORS } from "../values/colors";
 
 // Based on https://github.com/nicoespeon/gitgraph.js/tree/master/packages/gitgraph-react
 const CommitGraph = () => {
   const customTemplate = templateExtend(TemplateName.Metro, {
-    colors: ["#DF9FF7", "#96D0EC", "#8AE798", "#EC9696"],
+    colors: [COLORS.purple, COLORS.blue, COLORS.green, COLORS.red],
     branch: {
       lineWidth: 2,
       mergeStyle: MergeStyle.Straight,
