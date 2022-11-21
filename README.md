@@ -87,7 +87,7 @@ To run tests, run the following command
 - Error handling
 
 - Implement
-  - [Redux](https://redux.js.org)
+  - [Context API](https://reactjs.org/docs/context.html)
   - [SASS](https://sass-lang.com)
   - Table pagination
   - Interactive branch list
