@@ -74,6 +74,9 @@ To run tests, run the following command
 
 - [GitGraph.js](https://www.nicoespeon.com/gitgraph.js/)
   - Draw Git graph
+  
+- [Jest](https://jestjs.io)
+  - Unit testing
 
 ## Roadmap
 
