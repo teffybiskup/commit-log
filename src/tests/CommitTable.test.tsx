@@ -21,7 +21,7 @@ describe("CommitTable", () => {
     );
   });
 
-  test.skip("Should filter commits", async () => {
+  test("Should filter commits", async () => {
     // Arrange
     render(
       <BrowserRouter>
